@@ -17,6 +17,7 @@ content="AC repair Dhanbad, fridge repair Dhanbad, refrigerator repair Dhanbad, 
 
 <meta name="theme-color" content="#07111f">
 
+
 <style>
 
 /* ================= RESET ================= */
@@ -71,9 +72,6 @@ header{
     gap:20px;
 }
 
-
-/* LOGO */
-
 .logo{
     color:white;
     font-size:25px;
@@ -81,16 +79,12 @@ header{
     white-space:nowrap;
 }
 
-.logo .one{
+.logo span{
     color:#087cff;
 }
 
-.logo .stop{
+.logo b{
     color:#ff3030;
-}
-
-.logo .service{
-    color:white;
 }
 
 .logo small{
@@ -100,7 +94,6 @@ header{
     color:#b9c5d5;
     margin-top:-3px;
 }
-
 
 nav{
     display:flex;
@@ -145,7 +138,11 @@ nav a:hover{
     padding:70px 20px;
 
     background:
-    linear-gradient(135deg,rgba(2,10,23,.88),rgba(3,25,53,.68)),
+    linear-gradient(
+        135deg,
+        rgba(2,10,23,.88),
+        rgba(3,25,53,.68)
+    ),
     url("hero.jpeg");
 
     background-size:cover;
@@ -169,28 +166,27 @@ nav a:hover{
     margin-bottom:18px;
 }
 
-
-/* HERO TITLE COLORS */
-
 .hero h1{
     font-size:58px;
     line-height:1.1;
     font-weight:900;
     margin-bottom:20px;
+    color:white;
 }
 
-.hero h1 .one{
+/* ONE BLUE */
+
+.hero h1 span{
     color:#087cff;
 }
 
-.hero h1 .stop{
+/* STOP RED */
+
+.hero h1 b{
     color:#ff3030;
 }
 
-.hero h1 .service{
-    color:#ffffff;
-}
-
+/* SERVICE CENTRE WHITE */
 
 .hero h2{
     font-size:25px;
@@ -209,7 +205,6 @@ nav a:hover{
     font-size:15px!important;
     color:#b9c9dc!important;
 }
-
 
 .buttons{
     display:flex;
@@ -816,21 +811,18 @@ footer{
 }
 
 .footer-logo{
+    color:white;
     font-size:23px;
     font-weight:900;
     margin-bottom:5px;
 }
 
-.footer-logo .one{
+.footer-logo span{
     color:#087cff;
 }
 
-.footer-logo .stop{
+.footer-logo b{
     color:#ff3030;
-}
-
-.footer-logo .service{
-    color:#ffffff;
 }
 
 .footer-links{
@@ -893,27 +885,22 @@ footer{
     overflow:auto;
 }
 
-.overlay.show{
-    display:block;
-}
-
 .popup{
-    width:100%;
     max-width:500px;
     margin:5% auto;
     background:white;
-    border-radius:16px;
+    border-radius:18px;
     padding:30px;
     position:relative;
-    box-shadow:0 20px 60px rgba(0,0,0,.4);
-    animation:popupOpen .25s ease;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    animation:popupShow .35s ease;
 }
 
-@keyframes popupOpen{
+@keyframes popupShow{
 
     from{
         opacity:0;
-        transform:translateY(-20px) scale(.97);
+        transform:translateY(-25px) scale(.96);
     }
 
     to{
@@ -926,8 +913,8 @@ footer{
 .close{
     position:absolute;
     right:17px;
-    top:8px;
-    font-size:32px;
+    top:10px;
+    font-size:30px;
     color:#667085;
     cursor:pointer;
     line-height:1;
@@ -940,21 +927,13 @@ footer{
 .popup h2{
     text-align:center;
     margin-bottom:5px;
-    color:#172033;
+    font-size:26px;
 }
 
 .popup>p{
     text-align:center;
     color:#667085;
     margin-bottom:20px;
-}
-
-.popup label{
-    display:block;
-    font-size:14px;
-    font-weight:700;
-    margin-top:8px;
-    color:#273449;
 }
 
 .popup input,
@@ -979,7 +958,7 @@ footer{
 .popup select:focus,
 .popup textarea:focus{
     border-color:#087cff;
-    box-shadow:0 0 0 3px rgba(8,124,255,.10);
+    box-shadow:0 0 0 2px rgba(8,124,255,.08);
 }
 
 .submit{
@@ -991,7 +970,7 @@ footer{
     border-radius:8px;
     font-size:16px;
     font-weight:900;
-    margin-top:12px;
+    margin-top:8px;
     cursor:pointer;
 }
 
@@ -1142,8 +1121,8 @@ footer{
     }
 
     .popup{
-        margin:10% auto;
-        padding:24px 18px;
+        margin:12% auto;
+        padding:25px 18px;
     }
 
 }
@@ -1171,6 +1150,7 @@ footer{
 }
 
 </style>
+
 </head>
 
 
@@ -1185,9 +1165,7 @@ footer{
 
 <a href="#home" class="logo">
 
-<span class="one">One</span>
-<span class="stop">Stop</span>
-<span class="service"> Service Centre</span>
+<span>One</span> <b>Stop</b> Service Centre
 
 <small>HOME APPLIANCE REPAIR</small>
 
@@ -1208,13 +1186,14 @@ footer{
 
 
 <a class="header-call" href="tel:8294906410">
+
 📞 Call Now
+
 </a>
 
 </div>
 
 </header>
-
 
 
 <!-- ================= HERO ================= -->
@@ -1225,21 +1204,23 @@ footer{
 
 
 <div class="badge">
+
 🔧 PROFESSIONAL HOME APPLIANCE REPAIR SERVICE
+
 </div>
 
 
 <h1>
 
-<span class="one">One</span>
-<span class="stop">Stop</span>
-<span class="service"> Service Centre</span>
+<span>One</span> <b>Stop</b> Service Centre
 
 </h1>
 
 
 <h2>
+
 AC, Fridge & Washing Machine Repair in Dhanbad
+
 </h2>
 
 
@@ -1254,8 +1235,9 @@ washing machine and other home appliances.
 
 <p class="hero-services">
 
-AC Repair • Refrigerator Repair • Washing Machine Repair • Geyser Repair
-• Microwave Repair • Chimney Repair • LED TV Repair • Aquaguard Repair
+AC Repair • Refrigerator Repair • Washing Machine Repair •
+Geyser Repair • Microwave Repair • Chimney Repair •
+LED TV Repair • Aquaguard Repair
 
 </p>
 
@@ -1263,8 +1245,7 @@ AC Repair • Refrigerator Repair • Washing Machine Repair • Geyser Repair
 <div class="buttons">
 
 
-<a class="btn btn-call"
-href="tel:8294906410">
+<a class="btn btn-call" href="tel:8294906410">
 
 📞 Call Now
 
@@ -1280,9 +1261,7 @@ target="_blank">
 </a>
 
 
-<button class="btn btn-book"
-type="button"
-onclick="openBooking()">
+<button class="btn btn-book" onclick="openBooking()">
 
 🔧 Book a Service
 
@@ -1295,8 +1274,11 @@ onclick="openBooking()">
 <div class="hero-trust">
 
 <div class="trust-item">✓ AC Repair</div>
+
 <div class="trust-item">✓ Fridge Repair</div>
+
 <div class="trust-item">✓ Washing Machine Repair</div>
+
 <div class="trust-item">✓ Dhanbad Service</div>
 
 </div>
@@ -1305,7 +1287,6 @@ onclick="openBooking()">
 </div>
 
 </section>
-
 
 
 <!-- ================= SERVICES ================= -->
@@ -1322,7 +1303,10 @@ onclick="openBooking()">
 <h2>Our Repair Services</h2>
 
 <p>
-Professional repair and service for your essential home appliances in Dhanbad.
+
+Professional repair and service for your essential
+home appliances in Dhanbad.
+
 </p>
 
 </div>
@@ -1335,8 +1319,7 @@ Professional repair and service for your essential home appliances in Dhanbad.
 
 <div class="service-card">
 
-<img src="ac.jpeg"
-alt="AC Repair Service in Dhanbad">
+<img src="ac.jpeg" alt="AC Repair Service in Dhanbad">
 
 <div class="service-content">
 
@@ -1345,12 +1328,16 @@ alt="AC Repair Service in Dhanbad">
 <h3>AC Repair & Service</h3>
 
 <p>
-Split AC, inverter AC and residential air conditioner repair,
-troubleshooting and servicing.
+
+Split AC, inverter AC and residential air conditioner
+repair, troubleshooting and servicing.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for AC Repair →
+
 </a>
 
 </div>
@@ -1362,8 +1349,7 @@ Call for AC Repair →
 
 <div class="service-card">
 
-<img src="fr.jpeg"
-alt="Refrigerator Fridge Repair in Dhanbad">
+<img src="fr.jpeg" alt="Refrigerator Fridge Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1372,12 +1358,16 @@ alt="Refrigerator Fridge Repair in Dhanbad">
 <h3>Fridge Repair</h3>
 
 <p>
-Refrigerator inspection, cooling problem, compressor, gas and
-other repair services.
+
+Refrigerator inspection, cooling problem, compressor,
+gas and other repair services.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Fridge Repair →
+
 </a>
 
 </div>
@@ -1389,8 +1379,7 @@ Call for Fridge Repair →
 
 <div class="service-card">
 
-<img src="wm.jpeg"
-alt="Washing Machine Repair in Dhanbad">
+<img src="wm.jpeg" alt="Washing Machine Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1399,12 +1388,16 @@ alt="Washing Machine Repair in Dhanbad">
 <h3>Washing Machine Repair</h3>
 
 <p>
-Front load, top load and semi-automatic washing machine repair
-and service.
+
+Front load, top load and semi-automatic washing
+machine repair and service.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Washing Machine Repair →
+
 </a>
 
 </div>
@@ -1416,8 +1409,7 @@ Call for Washing Machine Repair →
 
 <div class="service-card">
 
-<img src="gr.jpeg"
-alt="Geyser Repair Service in Dhanbad">
+<img src="gr.jpeg" alt="Geyser Repair Service in Dhanbad">
 
 <div class="service-content">
 
@@ -1426,12 +1418,16 @@ alt="Geyser Repair Service in Dhanbad">
 <h3>Geyser Repair</h3>
 
 <p>
-Electric geyser inspection, heating problem, repair and
-maintenance service.
+
+Electric geyser inspection, heating problem,
+repair and maintenance service.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Geyser Repair →
+
 </a>
 
 </div>
@@ -1443,8 +1439,7 @@ Call for Geyser Repair →
 
 <div class="service-card">
 
-<img src="mw.jpeg"
-alt="Microwave Oven Repair in Dhanbad">
+<img src="mw.jpeg" alt="Microwave Oven Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1453,12 +1448,16 @@ alt="Microwave Oven Repair in Dhanbad">
 <h3>Microwave Repair</h3>
 
 <p>
-Microwave oven inspection, troubleshooting and professional
-repair service.
+
+Microwave oven inspection, troubleshooting
+and professional repair service.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Microwave Repair →
+
 </a>
 
 </div>
@@ -1470,8 +1469,7 @@ Call for Microwave Repair →
 
 <div class="service-card">
 
-<img src="ch.jpeg"
-alt="Kitchen Chimney Repair in Dhanbad">
+<img src="ch.jpeg" alt="Kitchen Chimney Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1480,11 +1478,16 @@ alt="Kitchen Chimney Repair in Dhanbad">
 <h3>Chimney Repair</h3>
 
 <p>
-Kitchen chimney repair, cleaning, maintenance and service.
+
+Kitchen chimney repair, cleaning, maintenance
+and service.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Chimney Repair →
+
 </a>
 
 </div>
@@ -1496,8 +1499,7 @@ Call for Chimney Repair →
 
 <div class="service-card">
 
-<img src="tv.jpeg"
-alt="LED TV Repair in Dhanbad">
+<img src="tv.jpeg" alt="LED TV Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1506,11 +1508,16 @@ alt="LED TV Repair in Dhanbad">
 <h3>LED TV Repair</h3>
 
 <p>
-LED TV troubleshooting, inspection and professional repair service.
+
+LED TV troubleshooting, inspection and
+professional repair service.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for LED TV Repair →
+
 </a>
 
 </div>
@@ -1522,8 +1529,7 @@ Call for LED TV Repair →
 
 <div class="service-card">
 
-<img src="aqua.jpeg"
-alt="Aquaguard Water Purifier Repair in Dhanbad">
+<img src="aqua.jpeg" alt="Aquaguard Water Purifier Repair in Dhanbad">
 
 <div class="service-content">
 
@@ -1532,12 +1538,16 @@ alt="Aquaguard Water Purifier Repair in Dhanbad">
 <h3>Aquaguard Repair</h3>
 
 <p>
-Aquaguard and water purifier inspection, repair and service
-for home use.
+
+Aquaguard and water purifier inspection,
+repair and service for home use.
+
 </p>
 
 <a href="tel:8294906410" class="service-link">
+
 Call for Aquaguard Repair →
+
 </a>
 
 </div>
@@ -1550,7 +1560,6 @@ Call for Aquaguard Repair →
 </div>
 
 </section>
-
 
 
 <!-- ================= BRANDS ================= -->
@@ -1567,7 +1576,10 @@ Call for Aquaguard Repair →
 <h2>Major Brands We Repair</h2>
 
 <p>
-We provide repair and service for many popular home appliance brands.
+
+We provide repair and service for many popular
+home appliance brands.
+
 </p>
 
 </div>
@@ -1620,7 +1632,6 @@ We provide repair and service for many popular home appliance brands.
 </section>
 
 
-
 <!-- ================= WHY CHOOSE US ================= -->
 
 <section class="why">
@@ -1635,8 +1646,10 @@ We provide repair and service for many popular home appliance brands.
 <h2>Why One Stop Service Centre?</h2>
 
 <p>
-Our goal is to provide convenient and professional appliance repair
-service to customers in Dhanbad.
+
+Our goal is to provide convenient and professional
+appliance repair service to customers in Dhanbad.
+
 </p>
 
 </div>
@@ -1652,7 +1665,10 @@ service to customers in Dhanbad.
 <h3>Professional Repair</h3>
 
 <p>
-Proper inspection and quality repair work for home appliances.
+
+Proper inspection and quality repair work
+for home appliances.
+
 </p>
 
 </div>
@@ -1665,7 +1681,10 @@ Proper inspection and quality repair work for home appliances.
 <h3>Doorstep Service</h3>
 
 <p>
-Convenient appliance repair service at your location.
+
+Convenient appliance repair service
+at your location.
+
 </p>
 
 </div>
@@ -1678,7 +1697,10 @@ Convenient appliance repair service at your location.
 <h3>Quick Response</h3>
 
 <p>
-Contact us easily by phone or WhatsApp for service requests.
+
+Contact us easily by phone or WhatsApp
+for service requests.
+
 </p>
 
 </div>
@@ -1691,7 +1713,10 @@ Contact us easily by phone or WhatsApp for service requests.
 <h3>Multiple Appliances</h3>
 
 <p>
-One service centre for AC, fridge, washing machine and other appliances.
+
+One service centre for AC, fridge,
+washing machine and other appliances.
+
 </p>
 
 </div>
@@ -1702,7 +1727,6 @@ One service centre for AC, fridge, washing machine and other appliances.
 </div>
 
 </section>
-
 
 
 <!-- ================= OUR WORK ================= -->
@@ -1719,7 +1743,10 @@ One service centre for AC, fridge, washing machine and other appliances.
 <h2>Our Repair Services</h2>
 
 <p>
-We provide repair and service for multiple home appliances.
+
+We provide repair and service for
+multiple home appliances.
+
 </p>
 
 </div>
@@ -1730,11 +1757,12 @@ We provide repair and service for multiple home appliances.
 
 <div class="work-item">
 
-<img src="ac.jpeg"
-alt="AC Repair Work Dhanbad">
+<img src="ac.jpeg" alt="AC Repair Work Dhanbad">
 
 <div class="work-caption">
+
 AC Repair & Service
+
 </div>
 
 </div>
@@ -1742,11 +1770,12 @@ AC Repair & Service
 
 <div class="work-item">
 
-<img src="fr.jpeg"
-alt="Fridge Repair Work Dhanbad">
+<img src="fr.jpeg" alt="Fridge Repair Work Dhanbad">
 
 <div class="work-caption">
+
 Fridge Repair
+
 </div>
 
 </div>
@@ -1754,11 +1783,12 @@ Fridge Repair
 
 <div class="work-item">
 
-<img src="wm.jpeg"
-alt="Washing Machine Repair Dhanbad">
+<img src="wm.jpeg" alt="Washing Machine Repair Dhanbad">
 
 <div class="work-caption">
+
 Washing Machine Repair
+
 </div>
 
 </div>
@@ -1766,11 +1796,12 @@ Washing Machine Repair
 
 <div class="work-item">
 
-<img src="mw.jpeg"
-alt="Microwave Repair Dhanbad">
+<img src="mw.jpeg" alt="Microwave Repair Dhanbad">
 
 <div class="work-caption">
+
 Microwave Repair
+
 </div>
 
 </div>
@@ -1778,11 +1809,12 @@ Microwave Repair
 
 <div class="work-item">
 
-<img src="ch.jpeg"
-alt="Chimney Repair Dhanbad">
+<img src="ch.jpeg" alt="Chimney Repair Dhanbad">
 
 <div class="work-caption">
+
 Chimney Repair
+
 </div>
 
 </div>
@@ -1790,11 +1822,12 @@ Chimney Repair
 
 <div class="work-item">
 
-<img src="tv.jpeg"
-alt="LED TV Repair Dhanbad">
+<img src="tv.jpeg" alt="LED TV Repair Dhanbad">
 
 <div class="work-caption">
+
 LED TV Repair
+
 </div>
 
 </div>
@@ -1802,11 +1835,12 @@ LED TV Repair
 
 <div class="work-item">
 
-<img src="aqua.jpeg"
-alt="Aquaguard Repair Dhanbad">
+<img src="aqua.jpeg" alt="Aquaguard Repair Dhanbad">
 
 <div class="work-caption">
+
 Aquaguard Repair
+
 </div>
 
 </div>
@@ -1814,11 +1848,12 @@ Aquaguard Repair
 
 <div class="work-item">
 
-<img src="gr.jpeg"
-alt="Geyser Repair Dhanbad">
+<img src="gr.jpeg" alt="Geyser Repair Dhanbad">
 
 <div class="work-caption">
+
 Geyser Repair
+
 </div>
 
 </div>
@@ -1829,7 +1864,6 @@ Geyser Repair
 </div>
 
 </section>
-
 
 
 <!-- ================= HOW IT WORKS ================= -->
@@ -1846,7 +1880,9 @@ Geyser Repair
 <h2>How Our Service Works</h2>
 
 <p>
+
 Getting appliance repair service is simple.
+
 </p>
 
 </div>
@@ -1862,7 +1898,10 @@ Getting appliance repair service is simple.
 <h3>Contact Us</h3>
 
 <p>
-Call or WhatsApp us with your appliance problem.
+
+Call or WhatsApp us with your
+appliance problem.
+
 </p>
 
 </div>
@@ -1875,7 +1914,10 @@ Call or WhatsApp us with your appliance problem.
 <h3>Share Details</h3>
 
 <p>
-Tell us your appliance type and the problem.
+
+Tell us your appliance type
+and the problem.
+
 </p>
 
 </div>
@@ -1888,7 +1930,10 @@ Tell us your appliance type and the problem.
 <h3>Technician Visit</h3>
 
 <p>
-Arrange a service visit according to your requirement.
+
+Arrange a service visit according
+to your requirement.
+
 </p>
 
 </div>
@@ -1901,7 +1946,10 @@ Arrange a service visit according to your requirement.
 <h3>Repair & Service</h3>
 
 <p>
-The appliance is inspected and repair work is carried out as required.
+
+The appliance is inspected and
+repair work is carried out as required.
+
 </p>
 
 </div>
@@ -1912,7 +1960,6 @@ The appliance is inspected and repair work is carried out as required.
 </div>
 
 </section>
-
 
 
 <!-- ================= ABOUT ================= -->
@@ -1940,19 +1987,25 @@ alt="One Stop Service Centre Dhanbad">
 <h2>One Stop Service Centre</h2>
 
 <p>
-One Stop Service Centre provides professional home appliance
-repair and service in Dhanbad, Jharkhand.
+
+One Stop Service Centre provides professional
+home appliance repair and service in Dhanbad, Jharkhand.
+
 </p>
 
 <p>
-We specialize in repair and service of AC, refrigerator,
-washing machine, geyser, microwave oven, kitchen chimney,
-LED TV and Aquaguard water purifier.
+
+We specialize in repair and service of AC,
+refrigerator, washing machine, geyser, microwave oven,
+kitchen chimney, LED TV and Aquaguard water purifier.
+
 </p>
 
 <p>
-Our aim is to provide convenient and reliable repair support
-for customers through phone, WhatsApp and doorstep service.
+
+Our aim is to provide convenient and reliable repair
+support for customers through phone, WhatsApp and doorstep service.
+
 </p>
 
 
@@ -2002,7 +2055,6 @@ target="_blank">
 </section>
 
 
-
 <!-- ================= GOOGLE REVIEWS ================= -->
 
 <section class="reviews" id="reviews">
@@ -2017,7 +2069,10 @@ target="_blank">
 <h2>Our Google Reviews</h2>
 
 <p>
-See the genuine customer reviews and ratings of One Stop Service Centre on Google.
+
+See the genuine customer reviews and ratings
+of One Stop Service Centre on Google.
+
 </p>
 
 </div>
@@ -2026,14 +2081,20 @@ See the genuine customer reviews and ratings of One Stop Service Centre on Googl
 <div class="review-box">
 
 <div class="stars">
+
 ★★★★★
+
 </div>
 
 <h3>Real Customer Reviews</h3>
 
 <p>
-Read our actual Google Business Profile reviews and customer feedback.
+
+Read our actual Google Business Profile reviews
+and customer feedback.
+
 </p>
+
 
 <a class="review-button"
 href="https://maps.app.goo.gl/wQnJPQ6yDrDt8bca7"
@@ -2050,7 +2111,6 @@ target="_blank">
 </section>
 
 
-
 <!-- ================= SERVICE AREA ================= -->
 
 <section class="areas" id="areas">
@@ -2065,7 +2125,9 @@ target="_blank">
 <h2>Serving Customers in Dhanbad</h2>
 
 <p>
+
 Our primary service area is Dhanbad, Jharkhand.
+
 </p>
 
 </div>
@@ -2078,8 +2140,10 @@ Our primary service area is Dhanbad, Jharkhand.
 <h3>Dhanbad, Jharkhand</h3>
 
 <p>
-Contact One Stop Service Centre to check service availability
-for your location.
+
+Contact One Stop Service Centre to check
+service availability for your location.
+
 </p>
 
 <br>
@@ -2093,13 +2157,11 @@ target="_blank">
 
 </a>
 
-
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- ================= BUSINESS INFORMATION ================= -->
@@ -2116,7 +2178,9 @@ target="_blank">
 <h2>One Stop Service Centre</h2>
 
 <p>
+
 Connect with us for home appliance repair and service.
+
 </p>
 
 </div>
@@ -2132,8 +2196,11 @@ Connect with us for home appliance repair and service.
 <h3>Our Location</h3>
 
 <p>
+
 Dhanbad, Jharkhand
+
 </p>
+
 
 <a class="business-button map-btn"
 href="https://maps.app.goo.gl/wQnJPQ6yDrDt8bca7"
@@ -2153,8 +2220,12 @@ View on Google Maps
 <h3>Find Us Online</h3>
 
 <p>
-View our business information and customer feedback on Justdial.
+
+View our business information and customer
+feedback on Justdial.
+
 </p>
+
 
 <a class="business-button justdial-btn"
 href="https://jsdl.in/DT-99TTPAPYWV6"
@@ -2174,7 +2245,6 @@ View on Justdial
 </section>
 
 
-
 <!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
@@ -2187,11 +2257,14 @@ View on Justdial
 
 <div class="contact-info">
 
+
 <h2>Contact One Stop Service Centre</h2>
 
 <p>
-Need AC, fridge, washing machine or other home appliance repair?
-Contact us by phone or WhatsApp.
+
+Need AC, fridge, washing machine or other
+home appliance repair? Contact us by phone or WhatsApp.
+
 </p>
 
 
@@ -2204,7 +2277,9 @@ Contact us by phone or WhatsApp.
 <strong>Phone</strong>
 
 <a href="tel:8294906410">
+
 8294906410
+
 </a>
 
 </div>
@@ -2241,7 +2316,9 @@ Chat on WhatsApp
 <strong>Service Area</strong>
 
 <span>
+
 Dhanbad, Jharkhand
+
 </span>
 
 </div>
@@ -2258,7 +2335,10 @@ Dhanbad, Jharkhand
 <strong>Repair Services</strong>
 
 <span>
-AC • Fridge • Washing Machine • Geyser • Microwave • Chimney • LED TV • Aquaguard
+
+AC • Fridge • Washing Machine • Geyser •
+Microwave • Chimney • LED TV • Aquaguard
+
 </span>
 
 </div>
@@ -2309,7 +2389,6 @@ allowfullscreen>
 </section>
 
 
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
@@ -2317,15 +2396,15 @@ allowfullscreen>
 
 <div class="footer-logo">
 
-<span class="one">One</span>
-<span class="stop">Stop</span>
-<span class="service"> Service Centre</span>
+<span>One</span> <b>Stop</b> Service Centre
 
 </div>
 
 
 <p>
+
 Professional Home Appliance Repair & Service — Dhanbad
+
 </p>
 
 
@@ -2343,12 +2422,13 @@ Professional Home Appliance Repair & Service — Dhanbad
 
 
 <div class="copyright">
+
 © 2026 One Stop Service Centre. All Rights Reserved.
+
 </div>
 
 
 </footer>
-
 
 
 <!-- ================= FLOATING BUTTONS ================= -->
@@ -2378,7 +2458,6 @@ title="WhatsApp One Stop Service Centre">
 </div>
 
 
-
 <!-- ================= BOOKING POPUP ================= -->
 
 <div class="overlay" id="bookingOverlay">
@@ -2387,109 +2466,74 @@ title="WhatsApp One Stop Service Centre">
 <div class="popup">
 
 
-<div class="close"
-onclick="closeBooking()">
+<div class="close" onclick="closeBooking()">
 
 ×
 
 </div>
 
 
-<h2>🔧 Book a Service</h2>
+<h2>
+
+🔧 Book a Service
+
+</h2>
+
 
 <p>
+
 Fill in your details and continue on WhatsApp.
+
 </p>
 
-
-<label for="customerName">
-Your Name
-</label>
 
 <input
 type="text"
 id="customerName"
-placeholder="Enter your name">
+placeholder="Your Name">
 
-
-<label for="customerPhone">
-Phone Number
-</label>
 
 <input
 type="tel"
 id="customerPhone"
-placeholder="Enter phone number">
+placeholder="Phone Number">
 
-
-<label for="appliance">
-Select Appliance
-</label>
 
 <select id="appliance">
 
-<option value="">
-Select Appliance
-</option>
+<option value="">Select Appliance</option>
 
-<option value="AC Repair">
-AC Repair
-</option>
+<option>AC Repair</option>
 
-<option value="Refrigerator / Fridge Repair">
-Refrigerator / Fridge Repair
-</option>
+<option>Refrigerator / Fridge Repair</option>
 
-<option value="Washing Machine Repair">
-Washing Machine Repair
-</option>
+<option>Washing Machine Repair</option>
 
-<option value="Geyser Repair">
-Geyser Repair
-</option>
+<option>Geyser Repair</option>
 
-<option value="Microwave Oven Repair">
-Microwave Oven Repair
-</option>
+<option>Microwave Oven Repair</option>
 
-<option value="Chimney Repair">
-Chimney Repair
-</option>
+<option>Chimney Repair</option>
 
-<option value="LED TV Repair">
-LED TV Repair
-</option>
+<option>LED TV Repair</option>
 
-<option value="Aquaguard Repair">
-Aquaguard Repair
-</option>
+<option>Aquaguard Repair</option>
 
 </select>
 
 
-<label for="customerLocation">
-Your Location
-</label>
-
 <input
 type="text"
 id="customerLocation"
-placeholder="Enter your location">
+placeholder="Your Location">
 
-
-<label for="problem">
-Problem
-</label>
 
 <textarea
 id="problem"
-placeholder="Tell us about the appliance problem..."></textarea>
+placeholder="Tell us about the problem..."></textarea>
 
 
-<button
-class="submit"
-type="button"
-onclick="sendBooking()">
+<button class="submit" onclick="sendBooking()">
 
 💬 Send Booking on WhatsApp
 
@@ -2501,114 +2545,92 @@ onclick="sendBooking()">
 </div>
 
 
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-/* ================= BOOKING POPUP ================= */
+
+/* ================= OPEN BOOKING ================= */
 
 function openBooking(){
 
-    const overlay = document.getElementById("bookingOverlay");
-
-    overlay.classList.add("show");
-
-    document.body.style.overflow = "hidden";
+    document.getElementById("bookingOverlay").style.display="block";
 
 }
 
+
+/* ================= CLOSE BOOKING ================= */
 
 function closeBooking(){
 
-    const overlay = document.getElementById("bookingOverlay");
-
-    overlay.classList.remove("show");
-
-    document.body.style.overflow = "";
+    document.getElementById("bookingOverlay").style.display="none";
 
 }
+
+
+/* ================= AUTOMATIC POPUP ================= */
+
+/*
+   Website open hone ke 1.5 second baad
+   booking popup automatically show hoga.
+*/
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        openBooking();
+
+    },1500);
+
+});
 
 
 /* ================= CLOSE OUTSIDE POPUP ================= */
 
-document.getElementById("bookingOverlay").addEventListener(
-    "click",
-    function(event){
+document.getElementById("bookingOverlay").addEventListener("click",function(e){
 
-        if(event.target === this){
+    if(e.target === this){
 
-            closeBooking();
-
-        }
+        closeBooking();
 
     }
-);
+
+});
 
 
-/* ================= ESC KEY ================= */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-
-            closeBooking();
-
-        }
-
-    }
-);
-
-
-/* ================= SEND BOOKING ================= */
+/* ================= SEND BOOKING TO WHATSAPP ================= */
 
 function sendBooking(){
+
 
     const name =
     document.getElementById("customerName").value.trim();
 
+
     const phone =
     document.getElementById("customerPhone").value.trim();
+
 
     const appliance =
     document.getElementById("appliance").value;
 
+
     const location =
     document.getElementById("customerLocation").value.trim();
+
 
     const problem =
     document.getElementById("problem").value.trim();
 
 
-    /* VALIDATION */
+    /* REQUIRED FIELDS */
 
-    if(!name){
+    if(!name || !phone || !appliance){
 
-        alert("Please enter your name.");
-
-        document.getElementById("customerName").focus();
-
-        return;
-
-    }
-
-
-    if(!phone){
-
-        alert("Please enter your phone number.");
-
-        document.getElementById("customerPhone").focus();
-
-        return;
-
-    }
-
-
-    if(!appliance){
-
-        alert("Please select an appliance.");
-
-        document.getElementById("appliance").focus();
+        alert(
+            "Please enter your name, phone number and appliance."
+        );
 
         return;
 
@@ -2618,6 +2640,7 @@ function sendBooking(){
     /* WHATSAPP MESSAGE */
 
     const message =
+
 `Hello One Stop Service Centre,
 
 I want to book a repair/service.
@@ -2631,8 +2654,12 @@ Problem: ${problem || "Not provided"}
 Please contact me for service.`;
 
 
+    /* WHATSAPP URL */
+
     const whatsappURL =
+
     "https://wa.me/918294906410?text=" +
+
     encodeURIComponent(message);
 
 
@@ -2644,16 +2671,13 @@ Please contact me for service.`;
     );
 
 
-    /* CLOSE POPUP */
-
-    closeBooking();
-
 }
 
 
 /* ================= CURRENT YEAR ================= */
 
 document.querySelector(".copyright").innerHTML =
+
 "© " +
 new Date().getFullYear() +
 " One Stop Service Centre. All Rights Reserved.";
@@ -2663,4 +2687,5 @@ new Date().getFullYear() +
 
 
 </body>
+
 </html>
